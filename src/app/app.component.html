@@ -4,24 +4,25 @@
  <h1>{{10 == 10}}</h1>
  <h1>{{'hello'.toUpperCase()}}</h1>
  
- <app-login></app-login>
-  <app-profile></app-profile>
+  <app-login></app-login>
+  <app-profil  e></app-profile>
 
   <button (click)="handleClickEvent()">Click Me</button>
   <button (click)="updateName()">update</button>
   <button (click)="sum(10,20)">Sum</button> -->
 
-  <div>
+  <!-- <div>
     <br>
     <h2 class="counter">{{count}}</h2>
     <div class="btn-edit">
-      <button class="btn bg-red" (click)="handleCounter('minus')">Decremnet</button>
-
+      <button class="btn bg-red" (click)="handleCounter('minus')">Decremnet</button> 
+ 
       <button class="btn bg-dark" (click)="handleCounter('reset')">Reset</button>
 
       <button class="btn bg-green" (click)="handleCounter('plus')">Increment</button>
     </div>
-  </div>
+  </div> 
+  <hr>
  
   <h1>Event in Angular</h1>
 
@@ -40,4 +41,460 @@
   </div>
   <br>
   <br>
-  <input (input)="handleEvent($event)" type="text" name="user" placeholder="enter name">
+  <input  
+  (focus)="handleEvent($event)" 
+  (input)="handleEvent($event)" type="text" name="user" placeholder="entername">
+  <hr>-->
+
+  <!-- get set  -->
+   <!-- <h1>Get and Set input field value</h1>
+   <h1>User Name is :{{displayName}}</h1>
+   <input type="text" placeholder="Enter user name"  value="{{name}}" (input)="getName($event)">
+   <br>
+   <br>  
+   <button (click)="showName()">Get Name</button>
+   <button (click)="setName()">Set Name</button>
+   <br> 
+   <hr>
+   
+   <h1>email id is :{{email}}</h1>
+   
+   <input type="text" value="{{email}}" placeholder="enter email" #emailField>
+   <button    (click)="getEmail(emailField.value)">get email</button>
+
+   <button (click)="setEmail()">set email</button> -->
+  
+  
+
+   <!-- <p style="background-color: chartreuse;">profile works!</p>
+<style>
+  .btn{
+    font-size: 16px;
+    width: 150px;
+    font-weight: bold;
+    height:50px;
+    margin: 20px;
+    background-color:slateblue;
+    color:white;
+  }
+</style>
+
+<h1> IF Else | Control Flow</h1>
+
+<button class="btn" (click)="show()">Show</button>
+<button class="btn" (click)="hide()">Hide</button>
+<button class="btn" (click)="toggle()">toggle buton</button>
+
+
+@if(display){
+
+  <div style=" margin-left:100px; width:400px;height: 200px;background-color: green;">
+  
+  </div>
+
+}
+
+<hr>
+<br>
+<button (click)="toggleTwo()">Toggle 2 divs</button>
+<br><br>
+
+@if(toggleDiv){
+  <div style="background-color: gold; width: 400px; height: 400px;">
+
+  </div> 
+}
+@else{
+  <div style="background-color: red; width: 400px; height: 400px;">
+
+  </div> 
+}
+<br>-->
+<!-- control flow -->
+ <!--<button (click)="handColor(1)">Red</button>
+ <button (click)="handColor(2)">Blue</button>
+ <button (click)="handColor(3)">Green</button>
+ <button (click)="handColor(10)">Other</button>
+ <input type="text" (input)="handleInput($event)" placeholder="enter value"> 
+ @if(color==1){ 
+
+   <div style="background-color: red;width: 100px; height: 100px;"></div>
+ }
+ 
+ @else if(color==2){
+
+   <div style="background-color:blue;width: 100px; height: 100px;"></div>
+ }
+ 
+ @else if(color==3){
+
+   <div style="background-color: green;width: 100px; height: 100px;"></div>
+ }
+ @else{
+         
+   <div style="background-color: black;width: 100px; height: 100px;"></div>
+ } -->
+
+ 
+ <!-- <br> -->
+ <!-- switch case -->
+  <!-- <h1>Switch  case in angular</h1>
+  <button (click)="handleColor1('red')">Red</button>
+  <button (click)="handleColor1('green')">Green</button>
+  <button (click)="handleColor1('blue')">blue</button>
+  <button (click)="handleColor1('yellow')">Yellow</button>
+  <br><br>
+  <input type="text" (input)="changedColor($event)" placeholder="enter the color">
+
+<br>
+  @switch(color1){
+    @case('red'){
+      <h1 style="background-color: red;">Red color</h1>
+    }
+    @case('green'){
+      <h1 style="background-color: green;">Green color</h1>
+    }
+    @case('blue'){
+      <h1 style="background-color:blue;">Blue color</h1>
+    }
+    @case('yellow'){
+      <h1 style="background-color: yellow;">Yellow</h1>
+    }
+    @default{
+      <h1 style="background-color: black; color: white;">No Color Match</h1>
+    }
+  } -->
+
+  <!-- for loop in template -->
+   <!-- <h1>For Loop in template</h1>
+   @for(user of users; track user){
+    <h2>{{user}}</h2>
+   }
+   <hr>
+   @for(student of students; track student.name;let id=$index){
+    <h2> 
+      <span>{{id +1}}</span>
+      <span>{{student.name}}</span>
+      
+      <span>{{student.age}}</span>  
+      
+      <span>{{student.email}}</span>
+       
+      <button (click)="getName(student.name)">Get Name</button>
+    </h2>            
+   } -->
+
+   <!-- -------------------------------------------signals------------------------- -->
+    <br>
+    <!-- <h1>{{x}}</h1>-->
+     <br>
+
+    <!-- <button (click)="updateValue('dec')">Decrement</button>
+    <h1>{{count()}}</h1>
+    <button (click)="updateValue('inc')">Increment</button> 
+     -->
+     <!-- <button (click)=" this.count.set(this.count()-1)">Decrement</button>
+     <h1>{{count()}}</h1>
+     <button (click)=" this.count.set(this.count()+1)">Increment</button> 
+     
+  -->
+    <!--  -->
+  <!----------------------- ------------------- <h1>Data Type signal--------------------------s</h1>
+<h1>{{data()}}</h1> <h1>{{count()}}</h1> 
+    <button (click)="updateSignal()">update</button>
+     -->
+
+  <!------------------------------------------- computed signals ----------------->
+   <!-- <h1>computed signakls</h1>
+
+   <button (click)="showValue()">Show</button>
+   <button (click)="updateX   ()">Upadte x</button>
+
+    -->
+   <!-- ----------------------------------------effect in angular ----------------------->
+<!-- 
+   <h1>effect in angular</h1>
+
+   <h1>{{count()}}</h1>
+   <br>
+   <button (click)="toggleValue()">Update username</button>
+
+   @if(displayHeading){
+    
+     <h1 style=" background-color: green;">page Heading</h1>
+   }
+   @else{
+    <h1 style=" background-color: red;">page Heading</h1>
+   }   -->
+
+   <!-- for loop contextual varibales -->
+
+   <!-- @for(user of users; track user;let i=$index){
+     @if($first || $last){
+
+      <h3 style="background-color: red;">this is our {{i+1}} and name is {{user}}  </h3>
+    }
+    @else{
+      <h3 style="background-color: green;">this is our {{i+1}} and name is {{user}}  </h3>
+    } 
+      @if($even){
+        <h3 style="background-color:black;color: white;">this is our {{i+1}} and name is {{user}}  </h3>
+      }
+      @else{
+        <h3 style="background-color: grey;">this is our {{i+1}} and name is {{user}}  </h3>
+      } 
+
+    }
+  
+    @empty(){
+      <h1 style="background-color: yellow; color: red;text-align: center ;">no record found</h1>
+    } -->
+      <!----------------------------- two way binding ----------------------->
+      <br>
+      <!-- <h1>Two way binding</h1>
+
+      <input
+       [(ngModel)]="name"
+        type="text"
+         
+         placeholder="enter input">
+
+      <h1>{{name}}</h1> -->
+
+      <!-- ---------------------------toDo list------ -->
+       <!-- <h1 style="align-items: center;">to do list</h1> -->
+       <!-- <h1
+        [style.backgroundColor]="bgColor"
+        [style.fontSize.pt]="fontSize"
+        
+        >
+        to do list</h1>
+<br>
+        <h1 [style.fontSize]="zoom ? headingSizeBig :headingSizeSmall ">heading</h1>
+        <button (click)="updateHeading()">togglaer</button>
+
+       <input
+        type="text"
+         [(ngModel)]="task"
+          placeholder="enter task">
+       <button (click)="addTask()">Add task</button>
+
+       @for(task of taskList; track task.id){
+        <ul style="display: flex; justify-content: space-between; list-style: none; ">
+          <li>{{task.id}}</li>
+          <li style="text-align:start;">{{task.task}}</li>
+          <li><button (click)="deleteTask(task.id) ">Delete</button></li>
+        </ul>
+       } -->
+
+       <br>
+       <br>
+       
+       <!-- <h1 *ngIf="showTitle">Hello, Angular!</h1>
+       <button (click)="showTitle = !showTitle">Toggle Title</button>
+       <br>           
+       <ul>-->
+        <!-- <li *ngFor="let x of users">{{x}}</li> 
+       </ul>-->
+
+       <br>
+  <!-- <div *ngIf="block==0">
+    <h1>heading 0</h1>
+  </div>
+  <div *ngIf="block==1">
+    <h1>heading 1</h1>
+  </div>
+  <div *ngIf="block==2">
+    <h1>heading 2</h1>
+  </div> -->
+
+  <!-- <button (click)="updateBlock()"></button> -->
+
+  <!-- -------------------------------*ngSwitch directives----------------------- -->
+
+
+<!-- <button (click)="changdColor('red')">changed</button>
+<button (click)="changdColor('green')">changed</button>
+<button (click)="changdColor('yellow')">changed</button>
+<button (click)="changdColor('pink')">changed</button>
+<button (click)="changdColor('black')">changed</button> -->
+
+  <!-- <div [ngSwitch]="color" >
+    <h1 *ngSwitchCase="red" style="background-color: red;">REd color</h1>
+    <h1 *ngSwitchCase="green" style="background-color:green;">green color</h1>
+    <h1 *ngSwitchCase="yellow" style="background-color: yellow;">yellowcolor</h1>
+    <h1 *ngSwitchCase="pink" style="background-color: pink;">Pink color</h1>
+    <h1 *ngSwitchDefault="black" style="background-color: black; color: white;">no colormatch</h1>
+  </div> -->
+
+  <!-- -----------------------------------Routers  -------------->
+   <!-- <app-header></app-header> -->
+<br>
+
+
+   <!-- <router-outlet /> -->
+    <hr>
+    <!-- <h1> basic Reactive forms</h1> -->
+
+  <!-- <form action="" method="post">
+     <input type="text" placeholder="Enter name" [formControl]="name">
+     <br><br>
+     <input type="text" placeholder="Enter Pasword" [formControl]="password">
+     <br><br>
+     <button type="button"  (click)="displayValue()">Login</button>
+     <button type="button"  (click)="setValue()">set</button>-->
+      
+<!-- 
+     ///display the input value
+     <h3>{{name.value}}</h3> 
+     <h3>{{password.value}}</h3> -->
+
+  <!--</form> -->
+  <!-- 
+//
+display on page directly below the form 
+<h1>{{this.profileform.value.name}}</h1>
+<h1>{{this.profileform.value.email}}</h1>
+ -->
+
+  <!----------------------------------------form Grouping   ----------------->
+
+   <!-- <form   [formGroup]="profileform" (ngSubmit)="onSubmit()">
+     <input type="text" placeholder="Enter name" formControlName="name">
+     <br>
+     <span class="error" *ngIf="name?.hasError('required')">*</span>
+     <span class="error" *ngIf="name?.invalid &&(name?.dirty || name?.touched)"> Provide Name is required..</span>
+     <br><br>
+     <input type="text" placeholder="Enter Pasword" formControlName="password" >
+     <br>
+     <span class="error" *ngIf="name?.hasError('required')">*</span>
+     <span class="error" *ngIf="password?.invalid &&(password?.dirty || password?.touched)"> Provide Password is required..</span>
+     <br><br>
+     <input type="text"  placeholder="Enter Email" formControlName="email" >
+     <br>
+     <span class="error" *ngIf="email?.hasError('required')">*</span>
+     <span class="error" *ngIf="email?.invalid &&(email?.dirty || email?.touched)"> Provide Email is required..</span>
+     <br>
+     <br>
+     <button>Submit</button>
+     <br><br>-->
+     <!-- <button type="button" (click)="setValuue()">Set Value</button> -->
+
+   
+<!-- </form>  -->
+
+<!---------------------------------template form mostly acces by template ---------------->
+   <!-- <form #userForm="ngForm" (ngSubmit)="addUser(userForm.value)" >
+     <input type="text" #name="ngModel" placeholder="Enter name" name="name" ngModel required="">
+     <span class="error" *ngIf="name?.invalid &&(name?.dirty || name?.touched)"> Provide Name is required..</span>
+     <br>
+     
+     <br><br>
+     <input type="password" minlength="8" maxlength="15" #password="ngModel" placeholder="Enter Pasword" name="password" ngModel required>
+     <span class="error" *ngIf="password?.invalid &&(password?.dirty || password?.touched)">Please enter valid Password..</span>
+     <br>
+      
+     <br><br>
+     <input type="email" #email="ngModel"  placeholder="Enter Email" name="email" ngModel required >
+     <span class="error" *ngIf="email?.invalid &&(email?.dirty || email?.touched)"> Provide Email is required..</span>
+     <br>
+     <br>
+     <input type="text" #address="ngModel" pattern="[a-zA-Z0-9\s]+"  placeholder="Enter Address" name="address" ngModel required >
+     <span class="error" *ngIf="address?.invalid &&(address?.dirty || address?.touched)"> Provide Address is required..</span>
+     <br>
+     <br>
+      <select #gender="ngModel" name="gender" ngModel required="">
+        <option value="">Select gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <span class="error"   *ngIf="gender?.invalid &&(gender?.dirty || gender?.touched)"> Provide Gender is required..</span>
+     <br> 
+     <br>
+        <input type="range" min="0" max="20" name="range" ngModel>
+     <br>
+     <br>
+     <button [disabled]="userForm.invalid">Add User</button>
+     <br><br>
+     
+
+   
+</form> 
+
+<h3>{{userData?.name}}</h3>
+<h3>{{userData?.password}}</h3>
+<h3>{{userData?.email}}</h3>
+<h3>{{userData?.gender}}</h3> -->
+
+
+<!-- ------------------------------parents to child data pass compononts -->
+ <br>
+ <!-- <h1>pass data to parent comp</h1>
+ <app-user1 user="anil sindhu">
+ </app-user1> -->
+
+ <!-- -------------------------------------------------------------- -->
+
+ <!-- <h1>Reuse component</h1>
+ @for(user of users;track user){
+  <div>
+    <app-user1  [user]="user"></app-user1>
+  </div>
+}-->
+
+<!-- -------------------------------------pass data child to parent component----------- -->
+<!-- 
+<app-user1 (getUsers)="handleUsers($event)"></app-user1>
+
+<ul>
+  <li *ngFor="let user of users">{{ user }}</li>
+</ul> -->
+
+<!-- ------------------------Pipes in angular ---------------------->
+<!-- <h1>
+  pipe in angular
+</h1> -->
+
+<!-- <h2>{{title}}</h2>
+<h2>{{title | uppercase }}</h2>
+<h2>{{title | lowercase }}</h2>
+<h2>{{title | titlecase }}</h2>
+<br>
+<h2>{{date | date:'fullDate'}}</h2>
+<h2>{{date | date:'hh:mm:ss'}}</h2>
+
+<br>
+<h2>{{amout | currency }}</h2>
+<h2>{{amout | currency:'EUR' }}</h2>
+<h2>{{amout | currency:'INR' }}</h2>
+
+<h2>{{date | date:'fullDate'| uppercase}}</h2> -->
+
+<!-- --------------custom pipes ----------------->
+ <br>
+ <!-- <h1>custom pipes</h1>
+ <br>
+ <h2>{{amout | currencyConvertor}}</h2>
+ <h2>{{100 | currencyConvertor:12}}</h2> -->
+
+
+ <!-- -------------------component life cycle ---------------->
+ <br>
+ <h1>component life cycle</h1>
+  
+ <button (click)="updateCounter()">Count:{{counter}}</button> 
+ <div *ngIf="counter!=5">
+
+ </div>
+ <app-user [counter]="counter"></app-user>
+
+
+ 
+
+ 
+
+
+
+
+  
+

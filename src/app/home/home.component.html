@@ -1,0 +1,23 @@
+ 
+ 
+
+<!-- <a [routerLink]="['profile',{name:'anil sidhuddd'}]">Go to profile page</a> -->
+<!-- 
+<button (click)="goToProfile('peter')">Go to profile page</button>
+<br>
+
+<button (click)="goToProfile('nil sibdhu')">Go to profile page</button> -->
+<br>
+<!-- 
+<a  routerLink="profile">Go to profile</a> -->
+
+<!-----------------------    dynamic routing ----------------->
+<h1>User list</h1>
+
+<ul>
+
+  @for(user of users;track user.id){
+    <li routerLink="user/{{user.id}}/{{user.name}}">{{user.name}}</li>
+  }
+
+</ul>
